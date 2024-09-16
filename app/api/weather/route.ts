@@ -1,3 +1,5 @@
+import { Weather } from "#/types";
+
 export const dynamic = "force-dynamic";
 
 export function GET() {
@@ -15,5 +17,5 @@ export function GET() {
         text: ["Sunny", "Cloudy", "Rainy"][Math.floor(Math.random() * 3)],
       },
     },
-  });
+  } satisfies Weather);
 }

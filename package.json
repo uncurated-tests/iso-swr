@@ -11,7 +11,8 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.11"
+    "next": "14.2.11",
+    "swr": "2.2.6-beta.1"
   },
   "devDependencies": {
     "typescript": "^5",
