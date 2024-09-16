@@ -1,12 +1,10 @@
 "use client";
 
 import { Weather } from "#/types";
-import useSWR from "swr";
+import { useIsomorphicSWR } from "../lib/use-isomorphic-swr";
 
 export default function Page() {
-  const { data, isLoading } = useSWR<Weather>("/api/weather", () =>
-    fetch("/api/weather").then((res) => res.json())
-  );
+  const { data, isLoading } = useIsomorphicSWR<Weather>("/api/weather");
   return (
     <main>
       <h1>Weather</h1>

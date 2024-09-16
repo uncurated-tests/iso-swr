@@ -1,4 +1,5 @@
 export interface Weather {
+  auth?: string;
   location: {
     name: string;
     region: string;

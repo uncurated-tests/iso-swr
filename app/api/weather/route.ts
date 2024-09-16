@@ -2,8 +2,9 @@ import { Weather } from "#/types";
 
 export const dynamic = "force-dynamic";
 
-export function GET() {
+export function GET(req: Request) {
   return Response.json({
+    auth: req.headers.get("Authorization") ?? "<unknown>",
     location: {
       name: "San Francisco",
       region: "CA",
